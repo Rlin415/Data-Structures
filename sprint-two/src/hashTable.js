@@ -22,3 +22,7 @@ HashTable.prototype.remove = function(k){
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+//insert: O(n) (insert is constant, hashing algo depends but here is linear)
+//retrieve: O(n) (insert is constant, hashing algo depends but here is linear)
+//remove: O(n) (insert is constant, hashing algo depends but here is linear)

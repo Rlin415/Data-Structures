@@ -35,10 +35,24 @@ var binaryMethods = {
     }
     return result;
   },
-  depthFirstLog: function() {
+  depthFirstLog: function(cb, node) {
 
+    node = node || this;
+
+    cb(node.value);
+
+    if (node.left) {
+      node.depthFirstLog(cb, node.left);
+    }
+    if (node.right) {
+      node.depthFirstLog(cb, node.right);
+    }
   }
 };
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+ // insert: O(log n)
+ // contains: O(log n)
+ // depthFirstLog: O(n)
